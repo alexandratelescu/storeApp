@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="50.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="UI.AccountTypeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="Select an account type:" />
+    <SplitMenuButton fx:id="accountTypeButton" text="Choose">
+        <items>
+            <MenuItem text="User" onAction="#selectUser"/>
+            <MenuItem text="Admin" onAction="#selectAdmin"/>
+        </items>
+    </SplitMenuButton>
+    <Label fx:id="resultLabel" text="Selected account type: None" />
+    <HBox spacing="10" alignment="CENTER">
+        <VBox spacing="10">
+            <Button text="Log In" onAction="#showLogInFields" />
+            <TextField fx:id="emailField" promptText="Email" visible="false" />
+            <TextField fx:id="passwordField" promptText="Password" visible="false" />
+            <Button text="Submit" onAction="#logIn" visible="false" fx:id="submitButton" />
+        </VBox>
+        <VBox spacing="10">
+        <Button fx:id="signUpButton" text="Sign Up" onAction="#showSignUpFields" />
+            <TextField fx:id="firstNameField" promptText="First name" visible="false"/>
+            <TextField fx:id="lastNameField" promptText="Last name" visible="false"/>
+        <TextField fx:id="newemailField" promptText="Email" visible="false" />
+        <TextField fx:id="newpasswordField" promptText="Password" visible="false" />
+        <Button text="Submit" onAction="#signUp" visible="false" fx:id="submitButton2" />
+        </VBox>
+    </HBox>
+</VBox>

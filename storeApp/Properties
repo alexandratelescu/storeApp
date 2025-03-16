@@ -1,0 +1,8 @@
+AdminRepository=sql
+UserRepository=sql
+ProductRepository=sql
+OrderRepository=sql
+AdminFile=admins.txt
+UserFile=users.txt
+ProductFile=products.txt
+OrderFile=orders.txt
